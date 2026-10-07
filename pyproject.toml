@@ -1,6 +1,6 @@
 [project]
 name = "proxy-auto-config"
-version = "0.1.2"
+version = "0.1.3"
 description = "Parse a PAC file and evaluate its JavaScript logic in a minimal evaluator to determine the proxy for a given URL."
 requires-python = ">=3.10"
 dependencies = []
