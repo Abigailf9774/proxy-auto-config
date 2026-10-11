@@ -36,3 +36,10 @@ A frozen dataclass with two attributes:
 
 - `proxies`: a tuple of proxy strings, e.g. `("DIRECT",)` or `("PROXY proxy1:8080", "DIRECT")`
 - `raw`: the exact string returned by `FindProxyForURL`
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
